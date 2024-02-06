@@ -23,7 +23,7 @@ Our specific task is obviously not beyond the field of **Domain-incremental lear
 
 ### SW engineering
 
-
+![img](./assets/structure.png)
 
 
 
