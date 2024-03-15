@@ -23,11 +23,7 @@ Our specific task is obviously not beyond the field of **Domain-incremental lear
 
 ### SW engineering
 
-![img](./assets/structure.png)
-
-
-
-
+![img](assets/clip_image002.gif)
 
 ### CL Learning Strategies Evaluation
 
