@@ -11,6 +11,7 @@ from os.path import splitext, isfile, join
 from pathlib import Path
 from torch.utils.data import Dataset
 from tqdm import tqdm
+import time
 
 
 def load_image(filename):
@@ -37,6 +38,7 @@ def unique_mask_values(idx, mask_dir, mask_suffix):
 
 class BasicDataset(Dataset):
     def __init__(self, images_dir: str, mask_dir: str, scale: float = 1.0, mask_suffix: str = ''):
+        self.build_label = time.time()
         self.images_dir = Path(images_dir)
         self.mask_dir = Path(mask_dir)
         assert 0 < scale <= 1, 'Scale must be between 0 and 1'
@@ -108,7 +110,8 @@ class BasicDataset(Dataset):
 
         return {
             'x': torch.as_tensor(img.copy()).float().contiguous(),
-            'targets': torch.as_tensor(mask.copy()).long().contiguous()
+            'targets': torch.as_tensor(mask.copy()).long().contiguous(),
+            'task_labels':torch.as_tensor(self.build_label)
         }
 
 

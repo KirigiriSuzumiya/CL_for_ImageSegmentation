@@ -1,0 +1,8 @@
+*.png
+*.pyc
+
+experience/data/
+experience/tb_data/
+
+log.txt
+*/ipynb_checkpoints/
