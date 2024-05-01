@@ -108,11 +108,16 @@ class BasicDataset(Dataset):
         img = self.preprocess(self.mask_values, img, self.scale, is_mask=False)
         mask = self.preprocess(self.mask_values, mask, self.scale, is_mask=True)
 
-        return {
-            'x': torch.as_tensor(img.copy()).float().contiguous(),
-            'targets': torch.as_tensor(mask.copy()).long().contiguous(),
-            'task_labels':torch.as_tensor(self.build_label)
-        }
+        # return {
+        #     'x': torch.as_tensor(img.copy()).float().contiguous(),
+        #     'targets': torch.as_tensor(mask.copy()).long().contiguous(),
+        #     'task_labels':torch.as_tensor(self.build_label)
+        # }
+        return [
+            torch.as_tensor(img.copy()).float().contiguous(),
+            torch.as_tensor(mask.copy()).long().contiguous(),
+            torch.as_tensor(self.build_label)
+        ]
 
 
 class dataSet(Dataset):

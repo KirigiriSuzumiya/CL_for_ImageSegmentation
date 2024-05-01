@@ -1,9 +1,10 @@
 """ Full assembly of the parts to form the complete network """
 
 from .unet_parts import *
+from avalanche.models.base_model import BaseModel
 
 
-class UNet(nn.Module):
+class UNet(nn.Module, BaseModel):
     def __init__(self, n_channels, n_classes, bilinear=False):
         super(UNet, self).__init__()
         self.n_channels = n_channels
@@ -34,6 +35,14 @@ class UNet(nn.Module):
         x = self.up4(x, x1)
         logits = self.outc(x)
         return logits
+    
+    def get_features(self, x):
+        x1 = self.inc(x)
+        x2 = self.down1(x1)
+        x3 = self.down2(x2)
+        x4 = self.down3(x3)
+        x5 = self.down4(x4)
+        return x5 
 
     def use_checkpointing(self):
         self.inc = torch.utils.checkpoint(self.inc)
