@@ -68,6 +68,6 @@ please refer to [sw_service](./sw_service/) for code and more details
 
 please refer to [setup](./setup.md) for more details
 
-## Contract me
+## Contact me
 
 email: `boyifan1@126.com`
