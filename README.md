@@ -1,8 +1,17 @@
 # CL_for_ImageSegmentation
-early repo for applying Continual Learning on Image Segmentation task
+repo for applying Continual Learning on Image Segmentation task.
 
+Mainly consist of two parts:
 
-
+- experience
+  - experience on `NAIVE`, `EWC`, `LFL`, `SI` and `GEM`
+  - report available on wandb
+  - [link](https://wandb.ai/kirigiri_suzumiya/UNet_CL)
+- software engineering
+  - a backend system for CL on Image Segmentation using UNet as basic model
+  - `Fastapi` for restful api
+  - `Celery & Redis` for Distributed Task Queue
+  - `Minio & Postgresql` for dataset&checkpoint storage
 
 
 ## Introduction
@@ -16,20 +25,13 @@ Three scenarios of **Continual Learning**
 Our specific task is obviously not beyond the field of **Domain-incremental learning**
 
 
+## CL Learning Strategies Evaluation
 
+Evaluation is based on U-Net and  [Avalanche](https://github.com/ContinualAI/avalanche). 
 
+please refer to [experience](./experience/) for notebook and more details
 
-## Experiments (TODO)
-
-### SW engineering
-
-![img](assets/clip_image002.gif)
-
-### CL Learning Strategies Evaluation
-
-Evaluation will be based on U-Net and  [Avalanche](https://github.com/ContinualAI/avalanche). **Waiting for specific model and data.**
-
-#### Batch Domain Continual Learning
+### Batch Domain Continual Learning
 
 - Less-Forgetful Learning (LFL):  [paper](https://arxiv.org/pdf/1607.00122.pdf) | [pdf](./reference/1607.00122.pdf)
   - Less-forgetting Learning in Deep Neural Networks
@@ -42,20 +44,30 @@ Evaluation will be based on U-Net and  [Avalanche](https://github.com/ContinualA
   - Overcoming catastrophic forgetting in neural networks
   - `Kirkpatrick J, Pascanu R, Rabinowitz N, et al. Overcoming catastrophic forgetting in neural networks[J]. Proceedings of the national academy of sciences, 2017, 114(13): 3521-3526.`
 
-#### Online Domain Continual Learning
+### Online Domain Continual Learning
 
 - Gradient Episodic Memory (GEM): [paper](https://proceedings.neurips.cc/paper/2017/hash/f87522788a2be2d171666752f97ddebb-Abstract.html) | [pdf](./reference/NIPS-2017-gradient-episodic-memory-for-continual-learning-Paper.pdf)
   - Gradient Episodic Memory for Continual Learning
   - `Lopez-Paz D, Ranzato M A. Gradient episodic memory for continual learning[J]. Advances in neural information processing systems, 2017, 30.`
 
-#### Others
+### Others
 
 - Replay Buffer
 - Selection strategies
 - Loss Functions
 - ...
 
-- Multi-Domain Incremental Learning for Semantic Segmentation: [paper](http://arxiv.org/abs/2110.12205) | [pdf](./reference/2110.12205.pdf)
+## SW engineering
 
-![image](./assets/final-main-diagram-wacv1.png)
+please refer to [sw_service](./sw_service/) for code and more details
 
+![img](assets/structure.png)
+
+
+## ENV & Setup
+
+please refer to [setup](./setup.md) for more details
+
+## Contract me
+
+email: `boyifan1@126.com`

@@ -25,3 +25,10 @@ services:
       - 9000:9000
       - 9001:9001
     command: server /data --console-address ":9001"
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    volumes:
+      - .volume/redis:/data

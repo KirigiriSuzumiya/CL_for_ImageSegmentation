@@ -3,5 +3,6 @@
 
 experience/log/
 .volume/
+sw_service/tmp/
 
 */ipynb_checkpoints/
