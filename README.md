@@ -6,7 +6,10 @@ Mainly consist of two parts:
 - experience
   - experience on `NAIVE`, `EWC`, `LFL`, `SI` and `GEM`
   - report available on wandb
-  - [link](https://wandb.ai/kirigiri_suzumiya/UNet_CL)
+  - [link](https://api.wandb.ai/links/kirigiri_suzumiya/nrn4i0as)
+
+  <iframe src="https://wandb.ai/kirigiri_suzumiya/UNet_CL/reports/CL_for_ImageSegmentation--Vmlldzo3Nzg4NTU0" style="border:none;height:1024px;width:100%">
+
 - software engineering
   - a backend system for CL on Image Segmentation using UNet as basic model
   - `Fastapi` for restful api
