@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:13.2
+    restart: on-failure
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=cldb
+    volumes:
+      - .volume/db:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  minio:
+    image: quay.io/minio/minio
+    restart: on-failure
+    environment:
+      - MINIO_ROOT_USER=root
+      - MINIO_ROOT_PASSWORD=password
+    volumes:
+      - .volume/minio:/data
+    ports:
+      - 9000:9000
+      - 9001:9001
+    command: server /data --console-address ":9001"

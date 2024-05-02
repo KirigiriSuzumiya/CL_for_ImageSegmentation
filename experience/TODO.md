@@ -14,23 +14,23 @@
 >
 > waiting for experience scenarios design   
 
-- [ ]  Dataloader
+- [x]  Dataloader
   - [x] use torch dataloader loading files
   - [x] convert torch dataset to avalanche dataset
-- [ ] experience
+- [x] experience
   - [x] Convert dataset to CLDatasetExperience
 - [x] stream
   - [x] train
   - [x] test
   - [x] Eval
-- [ ] scenarios
-  - [ ] (deperated) default scenarios 
+- [x] scenarios
+  - [x] (deprecated) default scenarios 
     - [ ] ~~all scenarios is compiled for image classification~~
     - [ ] ~~decide to Overload class~~
-  - [ ] CL scenarios
+  - [x] CL scenarios
     - [x] build from stream
       - [x] compile experiences
-    - [ ] DataAttribute
+    - [x] DataAttribute
       - [x] task label needed for scenarios 
         - [x] edit dataloader policy
 
@@ -40,7 +40,7 @@
 
 
 
-- [ ] stratergy
+- [x] strategy
 
   - [x] naive
     - [x] reload naive policy
@@ -51,12 +51,12 @@
       - [x] relaod _unpack_minibatch
     - [x] unit test
       - [x] Pass
-  - [ ] ewc
-  - [ ] SI
-  - [ ] LFL
-  - [ ] GEM
+  - [x] ewc
+  - [x] SI
+  - [x] LFL
+  - [x] GEM
 
-- [ ] settings
+- [x] settings
 
   - [x] model
 
@@ -71,7 +71,7 @@
       - [x] weight_decay = 0.00000001
       - [x] momentum = 0.999
 
-  - [ ] criterion
+  - [x] criterion
 
     - [x] CrossEntropyLoss()
 
@@ -79,7 +79,7 @@
 
   - [x] epoch = 5
 
-  - [ ] device
+  - [x] device
 
     - [x] Run on cpu for code testing
       - [x] Pass
@@ -98,12 +98,22 @@
   - [x] timing_metrics
   - [x] cpu_usage_metrics
   - [ ] forgetting_metrics
-  - [ ] (deperated) accuracy_metrics
+  - [ ] (deprecated) accuracy_metrics
     - [x] normal plugin is for image classification
     - [ ] TODO
 
 - [ ] Specific plugin
 
-  - [ ] accuracy_metrics for image segementation
+  - [x] using `strategy.eval()` 
 
-  
+
+
+
+### Report 
+
+- [ ] data storage
+  - [x] sending to wandb
+    - [x] dev project: `avalanche`
+    - [x] prd project: `UNet_CL`
+- [ ] metrics
+  - [ ] create report

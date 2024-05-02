@@ -1,5 +1,7 @@
 *.pyc
+*.wbk
 
 experience/log/
+.volume/
 
 */ipynb_checkpoints/
