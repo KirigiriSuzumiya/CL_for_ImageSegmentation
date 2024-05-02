@@ -5,11 +5,7 @@ Mainly consist of two parts:
 
 - experience
   - experience on `NAIVE`, `EWC`, `LFL`, `SI` and `GEM`
-  - report available on wandb
-  - [link](https://api.wandb.ai/links/kirigiri_suzumiya/nrn4i0as)
-
-  <iframe src="https://wandb.ai/kirigiri_suzumiya/UNet_CL/reports/CL_for_ImageSegmentation--Vmlldzo3Nzg4NTU0" style="border:none;height:1024px;width:100%">
-
+  - report available on wandb [link](https://api.wandb.ai/links/kirigiri_suzumiya/nrn4i0as)
 - software engineering
   - a backend system for CL on Image Segmentation using UNet as basic model
   - `Fastapi` for restful api
@@ -33,6 +29,8 @@ Our specific task is obviously not beyond the field of **Domain-incremental lear
 Evaluation is based on U-Net and  [Avalanche](https://github.com/ContinualAI/avalanche). 
 
 please refer to [experience](./experience/) for notebook and more details
+
+report available on wandb [link](https://api.wandb.ai/links/kirigiri_suzumiya/nrn4i0as)
 
 ### Batch Domain Continual Learning
 
