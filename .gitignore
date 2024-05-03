@@ -1,5 +1,6 @@
 *.pyc
 *.wbk
+*.svg
 
 experience/log/
 .volume/
