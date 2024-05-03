@@ -1,8 +1,12 @@
 # CL_for_ImageSegmentation
 
+![GitHub License](https://img.shields.io/github/license/KirigiriSuzumiya/CL_for_ImageSegmentation)
 [![Scc Count Badge](https://sloc.xyz/github/KirigiriSuzumiya/CL_for_ImageSegmentation/)](https://github.com/KirigiriSuzumiya/CL_for_ImageSegmentation/)
-[![License](https://img.shields.io/npm/l/sloc.svg)](https://github.com/KirigiriSuzumiya/CL_for_ImageSegmentation/blob/master/LICENCE.txt)
-[![Minified size](http://img.shields.io/badge/size-6,1K-blue.svg)](https://github.com/KirigiriSuzumiya/CL_for_ImageSegmentation)
+![GitHub code size in bytes](https://img.shields.io/github/repo-size/KirigiriSuzumiya/CL_for_ImageSegmentation)
+![GitHub language count](https://img.shields.io/github/languages/top/KirigiriSuzumiya/CL_for_ImageSegmentation)
+
+
+
 
 repo for applying Continual Learning on Image Segmentation task.
 
