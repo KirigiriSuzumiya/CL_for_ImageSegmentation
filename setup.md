@@ -13,4 +13,5 @@ pip install sqlalchemy
 pip install pandas
 pip install celery
 pip install redis
+pip install gradio
 ```

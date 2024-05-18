@@ -186,7 +186,7 @@ async def infer_image(model_id: str,
     task = infer.apply_async(args=[file.file.read(), model_path, config, task_id])
     result = task.get()
     response = FileResponse(result)
-    background_tasks.add_task(shutil.rmtree, os.path.dirname(result)) 
+    # background_tasks.add_task(shutil.rmtree, os.path.dirname(result)) 
     return response
 
 

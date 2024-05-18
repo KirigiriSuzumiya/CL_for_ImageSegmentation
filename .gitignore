@@ -5,5 +5,7 @@
 experience/log/
 .volume/
 sw_service/tmp/
+sw_service/log/
+Graduation-project/
 
 */ipynb_checkpoints/
